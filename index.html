@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OYO Premium Stays | Direct Booking Network</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <header>
+        <div class="brand-container">
+            <!-- 🏢 ओयो नेटवर्क जैसी प्रीमियम ब्रांडिंग -->
+            <h1 class="logo">🏨 PREMIUM STAYS NETWORK</h1>
+            <p class="tagline">Verified Luxury Stays & Hotels at Zero Intermediary Cost</p>
+        </div>
+        
+        <!-- 🔍 शहर बदलने का एडवांस फ़िल्टर ड्रॉपडाउन -->
+        <div class="search-filter-section">
+            <select id="cityFilter" class="filter-select">
+                <option value="all">🔍 All Locations (सभी शहर देखें)</option>
+                <option value="Patna">Patna</option>
+                <option value="Bhagalpur">Bhagalpur</option>
+                <option value="Ranchi">Ranchi</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="trust-banner">
+        <h2>⚡ 100% Verified Multi-Property Network | Zero Aggregator Commission</h2>
+        <p>Real Video Calls | Pay at Check-In Available | Secure Token Management</p>
+    </div>
+
+    <!-- 🎛️ होटल्स लोड होने का डायनामिक ग्रिड -->
+    <main class="hotel-grid-container" id="hotelGrid"></main>
+
+    <footer>
+        <p>&copy; 2026 Premium Stays Inc. All Rights Reserved.</p>
+        <p class="dev-credits">⚡ Architecture Designed & Maintained by Mayank</p>
+    </footer>
+
+    <!-- 🛎️ डायरेक्ट बुकिंग करने का वीआईपी पॉप-अप (Modal) -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <h2>🛎️ Confirm Direct Booking</h2>
+            <p id="modalHotelDetails"></p>
+            <form id="modalForm">
+                <input type="text" id="custName" placeholder="Enter Full Name" required>
+                <input type="tel" id="custPhone" placeholder="Enter WhatsApp Number" required>
+                <input type="date" id="checkInDate" required>
+                <button type="submit" class="confirm-btn">Complete Booking via WhatsApp</button>
+                <button type="button" class="close-btn" onclick="closeBookingModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
