@@ -1,56 +1,84 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OYO Premium Stays | Direct Booking Network</title>
+    <title>OYO Premium Network | Direct Hotel Booking Portal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <header>
-        <div class="brand-container">
-            <!-- 🏢 ओयो नेटवर्क जैसी प्रीमियम ब्रांडिंग -->
-            <h1 class="logo">🏨 PREMIUM STAYS NETWORK</h1>
-            <p class="tagline">Verified Luxury Stays & Hotels at Zero Intermediary Cost</p>
-        </div>
-        
-        <!-- 🔍 शहर बदलने का एडवांस फ़िल्टर ड्रॉपडाउन -->
-        <div class="search-filter-section">
-            <select id="cityFilter" class="filter-select">
-                <option value="all">🔍 All Locations (सभी शहर देखें)</option>
-                <option value="Patna">Patna</option>
-                <option value="Bhagalpur">Bhagalpur</option>
-                <option value="Ranchi">Ranchi</option>
-            </select>
-        </div>
-    </header>
-
-    <div class="trust-banner">
-        <h2>⚡ 100% Verified Multi-Property Network | Zero Aggregator Commission</h2>
-        <p>Real Video Calls | Pay at Check-In Available | Secure Token Management</p>
+    <!-- 🏮 पेट्रोल पंप स्टाइल वर्टिकल OYO लोगो पिलर (Left Side) -->
+    <div class="logo-pillar">
+        <div class="pillar-box">O</div>
+        <div class="pillar-box">Y</div>
+        <div class="pillar-box">O</div>
+        <div class="pillar-tag">STAYS</div>
     </div>
 
-    <!-- 🎛️ होटल्स लोड होने का डायनामिक ग्रिड -->
-    <main class="hotel-grid-container" id="hotelGrid"></main>
+    <div class="main-content-wrapper">
+        <header>
+            <div class="header-top">
+                <!-- 🌐 भाषा बदलने का लाइव बटन -->
+                <button id="langToggleBtn" class="lang-btn"><i class="fas fa-language"></i> Change Language (HI)</button>
+            </div>
+            <div class="brand-container">
+                <!-- ✍️ ओयो स्टाइलिश अक्षरों में -->
+                <h1 class="logo-title" id="mainTitle">✨ OYO STYLISH NETWORK ✨</h1>
+                <p class="tagline" id="mainTagline">Premium Property Grid & Direct WhatsApp Booking Management</p>
+            </div>
+            
+            <div class="search-filter-section">
+                <select id="cityFilter" class="filter-select">
+                    <option value="all" id="optAll">🔍 All Cities (सभी शहर देखें)</option>
+                    <option value="Patna">Patna</option>
+                    <option value="Bhagalpur">Bhagalpur</option>
+                    <option value="Ranchi">Ranchi</option>
+                </select>
+            </div>
+        </header>
 
-    <footer>
-        <p>&copy; 2026 Premium Stays Inc. All Rights Reserved.</p>
-        <p class="dev-credits">⚡ Architecture Designed & Maintained by Mayank</p>
-    </footer>
+        <!-- 🛡️ ओयो के बारे में अच्छी और सुरक्षित बातें -->
+        <section class="trust-features-strip">
+            <div class="feature-item"><i class="fas fa-shield-alt"></i> <span id="trust1">100% Safe & Secure Stays</span></div>
+            <div class="feature-item"><i class="fas fa-hand-holding-usd"></i> <span id="trust2">Zero Booking Fees / No Hidden Tax</span></div>
+            <div class="feature-item"><i class="fas fa-ban"></i> <span id="trust3">Free Cancellation Anytime</span></div>
+            <div class="feature-item"><i class="fas fa-user-check"></i> <span id="trust4">Local ID Accepted & Couple Friendly</span></div>
+        </section>
 
-    <!-- 🛎️ डायरेक्ट बुकिंग करने का वीआईपी पॉप-अप (Modal) -->
+        <!-- होटल्स ग्रिड -->
+        <main class="hotel-grid-container" id="hotelGrid"></main>
+
+        <!-- ℹ️ नीचे अबाउट सेक्शन और सोशल मीडिया लिंक्स -->
+        <section class="about-network-section">
+            <h2 id="aboutTitle">About Premium Stays Network</h2>
+            <p id="aboutDesc">We are India's fastest-growing autonomous hotel tech network. By eliminating aggregators, we connect premium corporate clients and travelers directly with elite property owners via WhatsApp automation. Save heavy commissions and experience transparent hospitality.</p>
+            
+            <div class="social-links-box">
+                <a href="https://instagram.com" target="_blank" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon face"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://youtube.com" target="_blank" class="social-icon you"><i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Premium Stays Network Inc. All Rights Reserved.</p>
+            <p class="dev-credits">⚡ Core Engine & Architecture Maintained by Mayank (Enterprise Web Developer)</p>
+        </footer>
+    </div>
+
+    <!-- 🛎️ बुकिंग कन्फर्मेशन मॉडल -->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
-            <h2>🛎️ Confirm Direct Booking</h2>
+            <h2 id="modalHead">🛎️ Confirm Direct Booking</h2>
             <p id="modalHotelDetails"></p>
             <form id="modalForm">
                 <input type="text" id="custName" placeholder="Enter Full Name" required>
                 <input type="tel" id="custPhone" placeholder="Enter WhatsApp Number" required>
                 <input type="date" id="checkInDate" required>
-                <button type="submit" class="confirm-btn">Complete Booking via WhatsApp</button>
-                <button type="button" class="close-btn" onclick="closeBookingModal()">Cancel</button>
+                <button type="submit" class="confirm-btn" id="modalSubmitBtn">Complete Booking via WhatsApp</button>
+                <button type="button" class="close-btn" onclick="closeBookingModal()" id="modalCloseBtn">Cancel</button>
             </form>
         </div>
     </div>
