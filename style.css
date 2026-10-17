@@ -11,19 +11,14 @@
     width: 70px; height: 100vh;
     background: linear-gradient(180deg, #dc2626, #991b1b);
     display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    box-shadow: 4px 0 15px rgba(0,0,0,0.3); z-index: 99; gap: 8px;
+    align-items: center; justify-content: flex-start;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.3); z-index: 99; padding-top: 20px;
 }
-.pillar-box {
-    width: 45px; height: 45px; background: white;
-    color: #dc2626; font-size: 26px; font-weight: 900;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-.pillar-tag {
-    color: white; font-size: 11px; font-weight: bold;
-    letter-spacing: 2px; text-transform: uppercase;
-    transform: rotate(-90deg); margin-top: 30px; white-space: nowrap;
+.pillar-logo-img {
+    width: 85%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
 }
 
 /* राइट साइड का पूरा कंटेंट रैपर */
@@ -39,15 +34,27 @@ header {
     position: relative;
 }
 .header-top { display: flex; justify-content: flex-end; max-width: 1200px; margin: 0 auto; }
+
 .lang-btn {
     background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
     color: white; padding: 6px 14px; border-radius: 20px; cursor: pointer;
     font-weight: 600; font-size: 13px;
 }
 
+.top-logo-box {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.main-top-logo {
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+}
+
 /* ✍️ ओयो स्टाइलिश अक्षरों में */
 .logo-title {
-    margin: 10px 0 5px 0; font-size: 2.3rem; font-weight: 900;
+    margin: 5px 0 5px 0; font-size: 2.3rem; font-weight: 900;
     color: #ffffff; letter-spacing: 2px;
     text-shadow: 0 0 10px #3b82f6, 0 0 20px #1d4ed8;
 }
@@ -84,7 +91,6 @@ header {
 }
 .hotel-card:hover { transform: translateY(-5px); }
 
-/* असली इमेज बॉक्स को फिक्स किया */
 .hotel-img-box {
     height: 220px; width: 100%; position: relative; background: #e2e8f0;
 }
@@ -119,12 +125,12 @@ header {
 .about-network-section h2 { color: #38bdf8; margin-top: 0; font-size: 1.6rem; }
 .about-network-section p { color: #94a3b8; font-size: 14px; line-height: 1.6; max-width: 800px; margin: 0 auto 25px auto; }
 
-/* सोशल आइकन्स बैकअप (फॉन्ट-ऑसम ब्लॉक होने पर भी काम करेगा) */
 .social-links-box { display: flex; justify-content: center; gap: 20px; }
 .social-icon {
-    width: 90px; padding: 8px 0; border-radius: 20px; background: #1e293b;
+    width: 95px; padding: 10px 0; border-radius: 20px; background: #1e293b;
     display: flex; align-items: center; justify-content: center;
     color: white; font-size: 13px; font-weight: bold; text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 .social-icon.insta { background: #e1306c; }
 .social-icon.face { background: #1877f2; }

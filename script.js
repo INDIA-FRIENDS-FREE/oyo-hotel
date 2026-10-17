@@ -1,22 +1,24 @@
- // 🏨 100% गारंटेड और वर्किंग इमेज यूआरएल का नया डेटाबेस
+ // 🏨 मयंक भाई का 100% सुपर-फास्ट फिक्स इमेजेस वाला डेटाबेस
 const datasetHotels = [
     { 
         id: 1, 
-        name: "OYO Premium Flagship 104", 
+        name: "OYO Premium Flagship 104 (Luxury Room)", 
         city: "Patna", 
         price: 1499, 
         specs: "AC Luxury King Room | Premium Smart TV | Couple Friendly Space | High-Speed WiFi Included", 
-        img: "https://unsplash.com", 
+        img: "hotel.jpg",
+
         badge: "best seller" 
     },
     { 
         id: 2, 
-        name: "Hotel Heritage Palace Deluxe", 
+        name: "OYO Premium Flagship 104 (Attached Bathroom)", 
         city: "Patna", 
         price: 1899, 
-        specs: "Suite Balcony View | Cozy Living Lounge | 24/7 Room Service Support | Corporate Luxury Setup", 
-        img: "https://unsplash.com", 
-        badge: "top rated" 
+        specs: "Premium Modern Bathroom Layout | High Quality Geyser & Showers | Fully Sanitized & Secure Setup", 
+        img: "https://freeimage.host",
+
+        badge: "luxury bath" 
     },
     { 
         id: 3, 
@@ -24,7 +26,7 @@ const datasetHotels = [
         city: "Bhagalpur", 
         price: 1199, 
         specs: "Standard Clean AC Room | Attached Modern Bath | Geyser Enabled | Perfect Budget Travel Option", 
-        img: "https://unsplash.com", 
+        img: "https://picsum.photos", 
         badge: "budget choice" 
     },
     { 
@@ -33,7 +35,7 @@ const datasetHotels = [
         city: "Bhagalpur", 
         price: 2199, 
         specs: "Executive Double Bed Suite | Private Workspace Setup | Free Secure Car Parking | Complimentary Breakfast", 
-        img: "https://unsplash.com", 
+        img: "https://picsum.photos", 
         badge: "premium suite" 
     },
     { 
@@ -42,7 +44,7 @@ const datasetHotels = [
         city: "Ranchi", 
         price: 1350, 
         specs: "Modern Ventilated AC Room | Fresh Linens Guaranteed | 100% Sanitized Layout | Couple Secure", 
-        img: "https://unsplash.com", 
+        img: "https://picsum.photos", 
         badge: "popular" 
     },
     { 
@@ -51,7 +53,7 @@ const datasetHotels = [
         city: "Ranchi", 
         price: 2500, 
         specs: "Ultra Luxury Suite | Swimming Pool View Balcony | Premium Mini-Bar Setup | High Density Bedding", 
-        img: "https://unsplash.com", 
+        img: "https://picsum.photos", 
         badge: "luxury choice" 
     }
 ];
@@ -82,7 +84,7 @@ const langData = {
         trust3: "📅 फ्री कैंसिलेशन",
         trust4: "👥 कपल फ्रेंडली",
         aboutTitle: "Premium Stays नेटवर्क के बारे में",
-        aboutDesc: "हम भारत के सबसे तेजी से बढ़ते स्वतंत्र होटल टेक network हैं। बिचौलियों को हटाकर, हम यात्रियों को व्हाट्सएप ऑटोमेशन के जरिए सीधे होटल मालिकों से जोड़ते हैं। भारी कमीशन बचाएं और पारदर्शी आतिथ्य का अनुभव करें।",
+        aboutDesc: "हम भारत के सबसे तेजी से बढ़ते स्वतंत्र hotel tech नेटवर्क हैं। बिचौलियों को हटाकर, हम यात्रियों को व्हाट्सएप ऑटोमेशन के जरिए सीधे hotel मालिकों से जोड़ते हैं। भारी कमीशन बचाएं and पारदर्शी आतिथ्य का अनुभव करें।",
         btnText: "सीधे व्हाट्सएप पर बुक करें",
         modalHead: "🛎️ डायरेक्ट बुकिंग की पुष्टि करें",
         modalSubmit: "व्हाट्सएप के जरिए बुकिंग पूरी करें",
